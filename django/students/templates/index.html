@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static % }
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .ra{
+        background-image: url(reg.2jpg.jpg);
+    background-size: cover;
+}
+
+
+
+.text{
+    align-items: center;
+    text-align: center;
+}
+.text1{
+
+    margin-top: 40px;
+    font-size: 21px;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding: 20px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+ }   
+ .btn
+ {
+    text-align: center;
+    padding: 2px;
+ }
+
+    </style>
+ </head>
+
+<body>
+    <div class="ra">
+        <h1 class="text">Student Registration Form</h1>
+        <form action="/register_form_submission"method="POST" autocomplete="off">
+            {% csrf_token %}
+        <div class="text1">
+            <div>
+                <label>Student Name</label>
+                <input style="position: relative;left: 40px;border-radius: 5px; font-size: 18px;" type="text"name="Student_Name"placeholder="Student_Name"><br><br>
+                <label>First Name</label>
+                <input style="position: relative;left: 55px;border-radius: 5px;font-size: 18px;" type="text" name="First_Name" required placeholder="First_Name"><br><br>
+                <label>Middle Name</label>
+                <input style="position: relative;left: 43px;border-radius: 5px;font-size: 18px;" type="text" name="Middle_Name"required placeholder="Middle_Name"><br><br>
+                <label >Last Name</label>
+                <input style="position: relative;left: 56px;border-radius: 5px;font-size: 18px;" type="text"name="Last_Name"required placeholder="Last_Name"><br><br>
+                <label>Date of Birth</label>
+                <input style="position: relative;left:6px;border-radius: 5px;font-size: 18px;" type="date"name="Date_of_Birth"required placeholder=""><br><br>
+                <label>Mobile Number</label>
+                <input style="position: relative;left: 35px;border-radius: 5px;font-size: 18px;" type="number"name="Mobile_Number" required placeholder="Mobile_Number"><br><br>
+                <label>Email Address</label>
+                <input style="position: relative;left:40px;border-radius: 5px;font-size: 18px;" type="email"name="Email_Address"required placeholder="Email_Address"><br><br>
+                <label>Address</label>
+                <input style="position: relative;left: 67px;border-radius: 5px;font-size: 18px;" type="text"name="Address"required placeholder="Address"><br><br>
+            </div>
+            <div class="form_group">
+            <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
